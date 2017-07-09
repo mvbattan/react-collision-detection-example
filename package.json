@@ -1,0 +1,52 @@
+{
+  "name": "utility-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apisauce": "^0.12.0",
+    "history": "^4.6.1",
+    "i18next": "^8.3.0",
+    "prop-types": "^15.5.10",
+    "radium": "^0.18.2",
+    "react": "^15.5.4",
+    "react-addons-perf": "^15.4.2",
+    "react-alert": "^2.0.1",
+    "react-dom": "^15.5.4",
+    "react-modal": "^1.7.8",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
+    "react-virtualized": "^9.7.6",
+    "redux": "^3.6.0",
+    "redux-form": "^6.7.0",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "seamless-immutable": "^7.1.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-prettier": "^2.1.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-prettier": "^2.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.13.3",
+    "prettier": "^1.4.2",
+    "prettier-eslint": "^6.2.3",
+    "react-scripts": "^1.0.7"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "lint-fix": "eslint src --fix",
+    "lint-diff": "git diff --name-only --cached --relative | grep \\.js$ | xargs eslint",
+    "precommit": "npm run lint-diff",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
