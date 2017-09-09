@@ -11,6 +11,10 @@ const WithLayoutWrapper = WrappedComponent => {
       this.id = v4();
     }
 
+    componentWillMount() {
+      window.addEventListener('keypress', this.handleKeyPress);
+    }
+
     componentDidMount() {
       this.props.measure(this.id, this.wrappedComponent.getBoundingClientRect());
     }
@@ -18,6 +22,12 @@ const WithLayoutWrapper = WrappedComponent => {
     componentDidUpdate() {
       this.props.measure(this.id, this.wrappedComponent.getBoundingClientRect());
     }
+
+    componentWillUnmount() {
+      window.removeEventListener('keypress', this.handleKeyPress);
+    }
+
+    handleKeyPress = e => console.log(e);
 
     render() {
       return <WrappedComponent {...this.props} refProp={ref => (this.wrappedComponent = ref)} />;
